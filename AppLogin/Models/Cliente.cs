@@ -11,7 +11,7 @@ namespace AppLogin.Models
 
         [Display(Name = "Nome Completo", Description = "Nome e Sobrenome.")]
         [Required(ErrorMessage = "O Nome completo é obrigatorio")]
-        public string Name { get; set; }
+        public string Nome { get; set; }
 
         [Display(Name = "Nascimento")]
         [Required(ErrorMessage = "A data é obrigatorio")]
