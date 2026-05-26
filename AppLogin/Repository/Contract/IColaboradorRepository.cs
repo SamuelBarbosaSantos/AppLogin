@@ -15,8 +15,9 @@ namespace AppLogin.Repository.Contract
         void Excluir(int Id);
         Colaborador ObterColaborador(int Id);
 
-        List<Colaborador>ObterColaboradorPorEmail(string email);
+        
         IEnumerable<Colaborador> ObterColaboradorPorEmail();
-        IPagedList<Cliente> ObterTodosColaboradores(int? pagina, string pesquisa);
+        IEnumerable<Colaborador> ObterTodosColaboradores();
+        IPagedList<Colaborador> ObterTodosColaboradores(int? pagina, string pesquisa);
     }
 }
