@@ -217,3 +217,4 @@ C:\Users\3MTEC\Desktop\Nova pasta\AppLogin\AppLogin\obj\Debug\net10.0\staticweba
 C:\Users\3MTEC\Desktop\Nova pasta\AppLogin\AppLogin\obj\Debug\net10.0\AppLogin.csproj.Up2Date
 C:\Users\3MTEC\Desktop\Nova pasta\AppLogin\AppLogin\obj\Debug\net10.0\AppLogin.genruntimeconfig.cache
 C:\Users\3MTEC\Desktop\Nova pasta\AppLogin\AppLogin\obj\Debug\net10.0\ref\AppLogin.dll
+C:\Users\3MTEC\Desktop\Nova pasta\AppLogin\AppLogin\bin\Debug\net10.0\Newtonsoft.Json.dll

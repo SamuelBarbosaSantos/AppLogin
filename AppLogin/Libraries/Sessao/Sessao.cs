@@ -35,7 +35,7 @@
             _context.HttpContext.Session.Remove(Key);
         }
 
-        public void RemoverTodos(string Key)
+        public void RemoverTodos()
         {
             _context.HttpContext.Session.Clear();
         }

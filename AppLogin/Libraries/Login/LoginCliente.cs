@@ -6,31 +6,36 @@ namespace AppLogin.Libraries.Login
     public class LoginCliente
     {
         private string Key = "Login.Cliente";
-        private Sessao.Sessao _sesssao;
+        private Sessao.Sessao _sessao;
 
         public LoginCliente(Sessao.Sessao sesssao)
         {
-            _sesssao = sesssao;
+            _sessao = sesssao;
         }
 
         public void Login(Cliente cliente)
         {
             string clienteJSONString = JsonConvert.SerializeObject(cliente);
-            _sesssao.Cadastrar(Key, clienteJSONString);
+            _sessao.Cadastrar(Key, clienteJSONString);
         }
     
         
     public Cliente GetCliente()
         {
-            if (_sesssao.Existe(Key))
+            if (_sessao.Existe(Key))
             {
-                string clienteJSONString = _sesssao.Consultar(Key);
+                string clienteJSONString = _sessao.Consultar(Key);
                 return JsonConvert.DeserializeObject<Cliente>(clienteJSONString);
             }
             else
             {
-                return();
+                return null;
             }
+        }
+
+     public void logout()
+        {
+            _sessao.RemoverTodos();
         }
     }
 }
