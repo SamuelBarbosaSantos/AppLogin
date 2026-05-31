@@ -57,7 +57,11 @@ namespace AppLogin.Controllers
             return View();
           
         }
-
+        public IActionResult LogoutCliente()
+        {
+            _loginCliente.Logout();
+            return RedirectToAction(nameof(Index));
+        }
         public IActionResult Index()
         {
             return View();
