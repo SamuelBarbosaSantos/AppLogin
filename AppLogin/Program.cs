@@ -26,7 +26,7 @@ builder.Services.AddSession(options =>
 });
 
 builder.Services.AddMvc().AddSessionStateTempDataProvider();
-builder.Services.AddScoped<AppLoginAspCore.Libraries.Sessao.Sessao>();
+builder.Services.AddScoped<AppLogin.Libraries.Sessao.Sessao>();
 builder.Services.AddScoped<LoginCliente>();
 
 //Adicionado para manipular a Sessão

@@ -33,7 +33,7 @@ namespace AppLogin.Libraries.Login
             }
         }
 
-     public void logout()
+     public void Logout()
         {
             _sessao.RemoverTodos();
         }
