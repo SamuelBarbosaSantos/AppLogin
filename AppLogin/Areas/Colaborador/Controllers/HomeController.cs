@@ -53,14 +53,22 @@ namespace AppLogin.Areas.Colaborador.Controllers
         }
         public IActionResult PainelGerente()
         {
-            ViewBag.Name = _loginColaborador.GetColaborador().Nome;
+            ViewBag.Nome = _loginColaborador.GetColaborador().Nome;
             ViewBag.Tipo = _loginColaborador.GetColaborador().Tipo;
             ViewBag.Email = _loginColaborador.GetColaborador().Email; 
             return View();
         }
         public IActionResult PainelComum()
         {
+            ViewBag.Nome = _loginColaborador.GetColaborador().Nome;
+            ViewBag.Tipo = _loginColaborador.GetColaborador().Tipo;
+            ViewBag.Email = _loginColaborador.GetColaborador().Email;
             return View();
+        }
+
+        public IActionResult Painel()
+        {
+           return View();
         }
     }
 }
