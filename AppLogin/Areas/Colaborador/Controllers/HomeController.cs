@@ -70,5 +70,10 @@ namespace AppLogin.Areas.Colaborador.Controllers
         {
            return View();
         }
+        public IActionResult Logout()
+        {
+            _loginColaborador.logout();
+            return RedirectToAction("Login", "Home");
+        }
     }
 }
