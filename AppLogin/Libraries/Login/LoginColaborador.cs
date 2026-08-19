@@ -21,6 +21,8 @@ namespace AppLogin.Libraries.Login
             }
 
 
+            
+
             public Colaborador GetColaborador()
             {
                 if (_sessao.Existe(Key))
@@ -33,7 +35,7 @@ namespace AppLogin.Libraries.Login
                     return null;
                 }
             }
-
+        
             public void logout()
             {
                 _sessao.RemoverTodos();
