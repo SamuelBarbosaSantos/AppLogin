@@ -1,7 +1,9 @@
 using AppLogin.Libraries.Login;
+using AppLogin.Libraries.Middleware;
 using AppLogin.Models;
 using AppLogin.Repository;
 using AppLogin.Repository.Contract;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,6 +47,7 @@ app.UseAuthorization();
 app.MapStaticAssets();
 app.UseCookiePolicy();
 app.UseSession();
+app.UseMiddleware<ValidateAntiForgeryTokenMiddleware>();
 app.MapControllerRoute(
     name:"areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
