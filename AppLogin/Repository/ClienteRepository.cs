@@ -207,5 +207,35 @@ namespace AppLogin.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void Ativar(int Id)
+        {
+            string Situacao = SituacaoConstant.Ativo;
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("update Cliente set Situacao=@Situacao WHERE Id=@Id ", conexao);
+
+                cmd.Parameters.Add("@Id", MySqlDbType.VarChar).Value = Id;
+                cmd.Parameters.Add("@Situacao", MySqlDbType.VarChar).Value = Situacao;
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
+
+        }
+        public void Desativar(int id)
+        {
+            string Situacao = SituacaoConstant.Desativado;
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("update Cliente set Situacao=@Situacao WHERE Id=@Id ", conexao);
+
+                cmd.Parameters.Add("@Id", MySqlDbType.VarChar).Value = Id;
+                cmd.Parameters.Add("@Situacao", MySqlDbType.VarChar).Value = Situacao;
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
+        }
     }
 }

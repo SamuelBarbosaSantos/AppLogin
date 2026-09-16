@@ -1,4 +1,5 @@
-﻿using AppLogin.Models;
+﻿using AppLogin.Libraries.Filtro;
+using AppLogin.Models;
 using AppLogin.Models.Constants;
 using AppLogin.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,18 @@ namespace AppLogin.Areas.Colaborador.Controllers
 
 
         }
-    }
+        [ValidateHttpRefere]
+        public IActionResult Ativar(int id)
+        {
+            _clienteRepository.Ativar(id);
+            return RedirectToAction(nameof(Index));
+        }
+        [ValidateHttpRefere]
+        public IActionResult Desativar(int id)
+        {
+            _clienteRepository.Desativar(id);
+            return RedirectToAction(nameof(Index));
+        }
 
+    }
 }
